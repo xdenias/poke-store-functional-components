@@ -2,7 +2,6 @@ import React from "react";
 // import { Container, Nav, Input } from "./styles";
 
 const Modal = ({ children, onClose, show }) => {
-  console.log(children, onClose, show);
   const onCloseF = (e) => {
     onClose && onClose(e);
   };

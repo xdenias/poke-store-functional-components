@@ -37,15 +37,21 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 190px;
-  height: 60px;
-  border: black solid 2px;
-  border-radius: 10px;
-  font-size: 18px;
+  display: none;
+  width: 77px;
+  height: 56px;
+  font-size: 20px;
+  border: none;
+  margin: 0% 5%;
+  border-radius: 44px;
 
   &:hover {
     background: black;
     color: white;
     cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
   }
 `;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Nav, Input } from "./styles";
+import { Container, Nav, Input, Button } from "./styles";
 
 const Header = ({ updatePokemons, showCartProp }) => {
   const [input, setInput] = useState("");
@@ -16,14 +16,14 @@ const Header = ({ updatePokemons, showCartProp }) => {
           }}
         ></Input>
       </Nav>
-      <button
+      <Button
         className="carrinho-button"
         onClick={() => {
           showCartProp();
         }}
       >
-        carrinho
-      </button>
+        Cart
+      </Button>
     </Container>
   );
 };

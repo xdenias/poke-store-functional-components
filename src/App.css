@@ -150,10 +150,6 @@ body {
   margin-top: 15px;
 }
 
-.carrinho-button {
-  display: none;
-}
-
 #container .wrapc {
   height: calc(100vh - 85px);
   overflow-x: auto;
@@ -164,10 +160,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  .carrinho-button {
-    display: block;
-  }
-
   #container .wrapd {
     position: absolute;
     left: 0;
