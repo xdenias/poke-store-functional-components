@@ -1,6 +1,7 @@
 import React from "react";
 import currency from "../../utils";
 // import "../.././App.css";
+import { Aside } from "./styles";
 
 const Cart = ({ priceAside, showCartProp }) => {
   // const [isShowCart, setShowCart] = useState(false);
@@ -15,7 +16,7 @@ const Cart = ({ priceAside, showCartProp }) => {
     .reduce((a, b) => a + b, 0);
 
   return (
-    <aside className={`wrapd ${showCartProp ? "active" : ""}`}>
+    <Aside className={`wrapd ${showCartProp ? "active" : ""}`}>
       <h1>Carrinho</h1>
       <div className="Itens">
         <table>
@@ -34,7 +35,7 @@ const Cart = ({ priceAside, showCartProp }) => {
       <h3>Total</h3>
       <div>{currency(totalPrice)}</div>
       <button>Finalizar</button>
-    </aside>
+    </Aside>
   );
 };
 

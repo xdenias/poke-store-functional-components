@@ -9,7 +9,7 @@ import { Container } from "./style";
 const PokemonTypePlant = () => {
   const [pokemons, setPokemons] = useState([]);
   const [preco, setPreco] = useState([]);
-  const [priceAside, setPriceAside] = useState([{ name: "", price: 0 }]);
+  const [priceAside, setPriceAside] = useState([]);
   const [isShowCart, setShowCart] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const PokemonTypePlant = () => {
   };
 
   const updatePokemons = (lettersInput) => {
-    if (lettersInput === " ") {
+    if (lettersInput === "") {
       getData();
     } else {
       setPokemons(
@@ -52,8 +52,8 @@ const PokemonTypePlant = () => {
     }
   };
 
-  const addPokemon = (price) => {
-    setPriceAside(price);
+  const addPokemon = (value, name) => {
+    setPriceAside([...priceAside, { name: name, price: value }]);
   };
 
   const showCart = () => {
