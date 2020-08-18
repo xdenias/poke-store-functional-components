@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import currency from "../../utils";
 // import "../.././App.css";
 import { Aside } from "./styles";
+import Modal from "../modal";
 
 const Cart = ({ priceAside, showCartProp }) => {
-  // const [isShowCart, setShowCart] = useState(false);
-  // console.log(isShowCart);
+  const [show, setShow] = useState(false);
 
-  // useEffect(() => {
-  //   setShowCart(showCartProp);
-  // }, [showCartProp]);
+  const showModal = () => {
+    setShow(!show);
+  };
 
   const totalPrice = priceAside
     .map((item) => item && item.price)
@@ -34,7 +34,24 @@ const Cart = ({ priceAside, showCartProp }) => {
       </div>
       <h3>Total</h3>
       <div>{currency(totalPrice)}</div>
-      <button>Finalizar</button>
+      <button
+        onClick={() => {
+          showModal();
+        }}
+      >
+        Finalizar
+      </button>
+
+      <Modal
+        onClose={() => {
+          showModal();
+          // this.showModal();
+          // this.resetPrices();
+        }}
+        show={show}
+      >
+        New pokemon, new adventure hahaha!
+      </Modal>
     </Aside>
   );
 };
