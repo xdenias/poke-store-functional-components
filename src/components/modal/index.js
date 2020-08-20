@@ -9,13 +9,13 @@ const Modal = ({ children, onClose, show }) => {
     return null;
   }
   return (
-    <div class="modal" id="modal">
+    <div className="modal" id="modal">
       <h2>Obrigado pela compra, volte sempre!</h2>
-      <div class="content">
+      <div className="content">
         {children}
-        <div class="actions">
+        <div className="actions">
           <button
-            class="toggle-button"
+            className="toggle-button"
             onClick={() => {
               onCloseF();
             }}

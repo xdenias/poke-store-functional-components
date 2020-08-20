@@ -1,28 +1,35 @@
 import styled from "styled-components";
 
 export const Aside = styled.aside`
-  /* height: calc(100vh - 85px); */
+  width: 28%;
+  height: calc(100vh - 85px);
+  border-left: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  /* @media (max-width: 600px) {
-    .carrinho-button {
-      display: block;
+  h1 {
+    border-bottom: solid black 1px;
+    width: 90%;
+
+    padding: 7px;
+  }
+  div {
+    width: 90%;
+    height: calc(100vh - 264px);
+    border-bottom: solid black 1px;
+
+    table {
+      width: 99%;
+      tr {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        border-bottom: solid 1px black;
+        td {
+          width: 69px;
+        }
+      }
     }
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    height: calc(100vh - 85px);
-    display: none;
-
-    #container .wrapd.active {
-      display: block;
-    }
-
-    &:active {
-      display: block;
-    }
-  } */
+  }
 `;
